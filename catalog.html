@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/catalog.css" />
+        <title>Антарес</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <img src="assets/img/logo.svg" alt="Логотип Антарес" class="header__logo">
+                <div class="header-info">
+                    <nav class="header__nav">
+                        <a href="catalog.html" class="header__link">Покупки и развлечения</a>
+                        <a href="services.html" class="header__link">Сервисы</a>
+                        <a href="navigation.html" class="header__link">Навигация</a>
+                        <a href="geo.html" class="header__link">Как добраться?</a>
+                    </nav>
+                    <div class="header__short-info">
+                        <address class="header-info__item header__address">г. Стерлитамак, ул. Гоголя 2</address>
+                        <p class="header-info__item header__schedule">Ежедневно с 9:00 до 18:00</p>
+                    </div>
+                </div>
+                <div class="burger-icon">
+                    <div class="burger-icon__line"></div>   
+                </div>
+            </header>
+            <main>
+                <section class="section catalog__filter-bar">
+                    <div class="catalog-search-field">
+                        <input type="text" class="input catalog-search-field__input">
+                        <button type="button" class="btn catalog-search-field__btn">
+                            <svg class="catalog-search-field__search-icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_9_213" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="35" height="35">
+                                <rect width="35" height="35" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_9_213)">
+                                <path d="M14.4792 23.9582C11.8299 23.9582 9.58767 23.0407 7.7526 21.2056C5.91753 19.3705 5 17.1284 5 14.4791C5 11.8298 5.91753 9.58764 7.7526 7.75258C9.58767 5.91753 11.8299 5 14.4792 5C17.1285 5 19.3707 5.91753 21.2057 7.75258C23.0408 9.58764 23.9583 11.8298 23.9583 14.4791C23.9583 15.5485 23.7882 16.5572 23.4479 17.5051C23.1076 18.453 22.6458 19.2915 22.0625 20.0207L30.2292 28.1873C30.4965 28.4547 30.6302 28.7949 30.6302 29.2081C30.6302 29.6213 30.4965 29.9616 30.2292 30.229C29.9618 30.4963 29.6215 30.63 29.2083 30.63C28.7951 30.63 28.4549 30.4963 28.1875 30.229L20.0208 22.0624C19.2917 22.6457 18.4531 23.1075 17.5052 23.4478C16.5573 23.788 15.5486 23.9582 14.4792 23.9582ZM14.4792 21.0415C16.3021 21.0415 17.8516 20.4035 19.1276 19.1275C20.4036 17.8515 21.0417 16.302 21.0417 14.4791C21.0417 12.6562 20.4036 11.1067 19.1276 9.83069C17.8516 8.55466 16.3021 7.91664 14.4792 7.91664C12.6562 7.91664 11.1068 8.55466 9.83073 9.83069C8.55469 11.1067 7.91667 12.6562 7.91667 14.4791C7.91667 16.302 8.55469 17.8515 9.83073 19.1275C11.1068 20.4035 12.6562 21.0415 14.4792 21.0415Z" fill="#1C1B1F"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="catalog-category">
+                        <label for="category" class="catalog-category__label">Категория</label>
+                        <select name="" id="category" class="input catalog-category__dropdown">
+                            <option value="Все">Все</option>
+                            <option value="Кафе">Кафе</option>
+                            <option value="Рестораны">Рестораны</option>
+                            <option value="Ювелирные магазины">Ювелирные магазины</option>
+                        </select>
+                    </div>
+                </section>
+                <div class="empty">Ничего не найдено :(</div>
+                <section class="section catalog">
+                    <div class="catalog-card" data-category="Ювелирные украшения">
+                        <div class="catalog-card__cover">
+                            <img src="assets/img/shop.jpg" alt="" class="catalog-card__picture">
+                        </div>
+                        <div class="catalog-card__content">
+                            <div class="catalog-card__info">
+                                <div class="catalog-card__aditional-info">
+                                    <p class="catalog-card__category">Ювелирные украшения</p>
+                                    <p class="catalog-card__place">1 этаж</p>
+                                </div>
+                                <h2 class="catalog-card__name">ЮВЕЛИР-ДИЗАЙН</h2>
+                            </div>
+                            <a href="" class="btn catalog-card__on-map">Показать на карте</a>
+                        </div>
+                    </div>
+                    <div class="catalog-card" data-category="Кафе">
+                        <div class="catalog-card__cover">
+                            <img src="assets/img/shop.jpg" alt="" class="catalog-card__picture">
+                        </div>
+                        <div class="catalog-card__content">
+                            <div class="catalog-card__info">
+                                <div class="catalog-card__aditional-info">
+                                    <p class="catalog-card__category">Кафе</p>
+                                    <p class="catalog-card__place">1 этаж</p>
+                                </div>
+                                <h2 class="catalog-card__name">ВкусноКушать</h2>
+                            </div>
+                            <a href="" class="btn catalog-card__on-map">Показать на карте</a>
+                        </div>
+                    </div>
+                    <div class="catalog-card" data-category="Кафе">
+                        <div class="catalog-card__cover">
+                            <img src="assets/img/shop.jpg" alt="" class="catalog-card__picture">
+                        </div>
+                        <div class="catalog-card__content">
+                            <div class="catalog-card__info">
+                                <div class="catalog-card__aditional-info">
+                                    <p class="catalog-card__category">Кафе</p>
+                                    <p class="catalog-card__place">1 этаж</p>
+                                </div>
+                                <h2 class="catalog-card__name">Пицца Ням</h2>
+                            </div>
+                            <a href="" class="btn catalog-card__on-map">Показать на карте</a>
+                        </div>
+                    </div>
+                    <div class="catalog-card" data-category="Рестораны">
+                        <div class="catalog-card__cover">
+                            <img src="assets/img/shop.jpg" alt="" class="catalog-card__picture">
+                        </div>
+                        <div class="catalog-card__content">
+                            <div class="catalog-card__info">
+                                <div class="catalog-card__aditional-info">
+                                    <p class="catalog-card__category">Рестораны</p>
+                                    <p class="catalog-card__place">1 этаж</p>
+                                </div>
+                                <h2 class="catalog-card__name">Delicat</h2>
+                            </div>
+                            <a href="" class="btn catalog-card__on-map">Показать на карте</a>
+                        </div>
+                    </div>
+                    <div class="catalog-card" data-category="Рестораны">
+                        <div class="catalog-card__cover">
+                            <img src="assets/img/shop.jpg" alt="" class="catalog-card__picture">
+                        </div>
+                        <div class="catalog-card__content">
+                            <div class="catalog-card__info">
+                                <div class="catalog-card__aditional-info">
+                                    <p class="catalog-card__category">Рестораны</p>
+                                    <p class="catalog-card__place">1 этаж</p>
+                                </div>
+                                <h2 class="catalog-card__name">Maay</h2>
+                            </div>
+                            <a href="" class="btn catalog-card__on-map">Показать на карте</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer-column">
+                    <div class="footer-column__name">Адрес</div>
+                    <div class="footer-column__value">г. Стерлитамак</div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column__name">График работ</div>
+                    <div class="footer-column__value">
+                        Ежедневно с 9:00 до 18:00
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column__name">Телефон</div>
+                    <div class="footer-column__value">+79603874777</div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column__name">Электронная почта</div>
+                    <div class="footer-column__value">antaresmebel@mail.ru</div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column__name">Авторское право</div>
+                    <div class="footer-column__value">
+                        © ИП Боргардт Ф.Ф., 2024
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/catalog.js"></script>
+    </body>
+</html>

@@ -1,0 +1,206 @@
+.catalog__filter-bar {
+    display: flex;
+    column-gap: 40px;
+    padding: 45px;
+    background-color: white;
+    border-radius: 40px;
+}
+.input {
+    display: block;
+    width: 400px;
+    height: 40px;
+    outline: 1px solid #9E9E9E;
+    border: none;
+    border-radius: 15px;
+    transition: outline .2s;
+    padding: 10px;
+}
+.input:focus {
+    outline: 1px solid var(--accent);
+}
+.catalog-search-field {
+    display: flex;
+    column-gap: 10px;
+    height: 40px;
+}
+.catalog-search-field__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 80px;
+}
+.catalog-category {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 45px;
+}
+.empty {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.catalog-card {
+    border-radius: 45px;
+    background-color: white;
+    overflow: hidden;
+}
+.catalog-card__cover {
+    height: 190px;
+}
+.catalog-card__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.catalog-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    padding: 20px;
+}
+.catalog-card__aditional-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.catalog-card__aditional-info p {
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 10px;
+}
+.catalog-card__name {
+    font-weight: 600;
+    font-size: 16px;
+}
+@media screen and (max-width: 1370px) {
+    .catalog {
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 1230px) {
+    .input {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1170px) {
+    .catalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 1020px) {
+    .input {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .catalog__filter-bar {
+        padding: 30px;
+    }
+    .catalog {
+        gap: 15px;
+    }
+    .catalog-card__cover {
+        height: 140px;
+    }
+    .catalog-card__content {
+        min-height: 200px;
+        padding: 15px;
+    }
+    .catalog-card__name {
+        font-size: 14px;
+    }
+    .catalog-card__on-map {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .catalog-card__cover {
+        height: 190px;
+    }
+    .catalog-card__content {
+        min-height: 250px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .catalog__filter-bar {
+        flex-direction: column;
+        row-gap: 20px;
+        margin-bottom: 15px;
+    }
+    .input {
+        flex: 1;
+        width: auto;
+    }
+    .catalog-search-field {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .catalog-card__cover {
+        height: 140px;
+    }
+    .catalog-card__content {
+        min-height: 200px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .catalog__filter-bar {
+        padding: 20px;
+    }
+    .catalog-search-field__btn {
+        width: 50px;
+    }
+    .catalog-search-field__search-icon {
+        width: 24px;
+        height: 24px;
+    }
+    .catalog-category__label {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .catalog-card__cover {
+        height: 120px;
+    }
+    .catalog-card__content {
+        padding: 0;
+        min-height: 150px;
+    }
+    .catalog-card__info {
+        padding: 5px;
+    }
+    .catalog-card__aditional-info {
+        flex-wrap: wrap-reverse;
+        /* flex-direction: column-reverse;
+        align-items: flex-start; */
+        margin-bottom: 10px;
+    }
+    .catalog-card__aditional-info p {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    /* .catalog-card__aditional-info p:last-child {
+        margin-bottom: 5px;
+    } */
+    .catalog-card__name, .catalog-card__on-map {
+        font-size: 12px;
+    }
+    .catalog-card__on-map {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+}

@@ -1,0 +1,131 @@
+body {
+    background-color: white;
+}
+.container {
+    padding: 45px;
+}
+.sitemap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+    height: calc(100dvh - 90px - 100px - 45px);
+}
+.sitemap__row {
+    display: flex;
+    gap: 45px;
+}
+.sitemap-item {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 30px;
+    font-size: 36px;
+    font-weight: 700;
+    border-radius: 40px;
+    flex: 1;
+    height: 340px;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: auto 130%;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+.sitemap-item.red {
+    background-color: var(--accent);
+}
+.sitemap-item.red:hover {
+    box-shadow: 0 0 32px var(--accent);
+}
+.sitemap-item.yellow {
+    background-color: #F6FF94;
+}
+.sitemap-item.yellow:hover {
+    box-shadow: 0 0 32px #F6FF94;
+}
+.sitemap-item.white-blue {
+    background-color: #94F9FF;
+}
+.sitemap-item.white-blue:hover {
+    box-shadow: 0 0 32px #94F9FF;
+}
+.sitemap-item.purple {
+    background-color: #C394FF;
+}
+.sitemap-item.purple:hover {
+    box-shadow: 0 0 32px #C394FF;
+}
+.sitemap-item.orange {
+    background-color: #FFC194;
+}
+.sitemap-item.orange:hover {
+    box-shadow: 0 0 32px #FFC194;
+}
+@media screen and (max-width: 1320px) {
+    .sitemap-item {
+        background-position: -30px center;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .sitemap {
+        row-gap: 30px;
+    }
+    .sitemap__row {
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .sitemap-item {
+        background-position: center;
+        background-size: auto 90%;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .sitemap {
+        height: 80dvh;
+    }
+    .sitemap__row {
+        flex: 1;
+    }
+    .sitemap-item {
+        height: 100%;
+    }
+    .sitemmap-item__name {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .sitemap {
+        row-gap: 15px;
+        height: calc(100dvh - 30px);
+    }
+    .sitemap__row {
+        gap: 15px;
+        flex-direction: column;
+    }
+    .sitemap__row:first-child {
+        flex: 3;
+    }
+    .sitemap__row:last-child {
+        flex: 2;
+    }
+    .sitemap-item {
+        flex: 1;
+        background-position: 90%;
+    }
+}
+@media screen and (max-width: 710px) {
+    .sitemmap-item__name {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .container {
+        padding: 10px;
+    }
+    .sitemap {
+        row-gap: 10px;
+        height: calc(100dvh - 20px);
+    }
+    .sitemap__row {
+        gap: 10px;
+    }
+}

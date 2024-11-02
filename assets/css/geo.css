@@ -1,0 +1,34 @@
+.map-section {
+    padding: 45px;
+    background-color: white;
+    border-radius: 40px;
+}
+.map {
+    border-radius: 40px;
+    aspect-ratio: 1 / 0.3;
+}
+@media screen and (max-width: 1440px) {
+    .map {
+        aspect-ratio: 1 / 0.4;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .map {
+        aspect-ratio: 1 / 0.8;
+    }
+}
+@media screen and (max-width: 980px) {
+    .map-section {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .map {
+        aspect-ratio: 1 / 1.2;
+    }
+}
+@media screen and (max-width: 520px) {
+    .map-section {
+        padding: 0;
+    }
+}

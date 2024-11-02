@@ -1,0 +1,227 @@
+main {
+    display: flex;
+    gap: 45px;
+    max-width: 100%;
+}
+.navigation-components {
+    flex: 2.4;
+    transition: flex .2s;
+}
+.navigation-floors {
+    display: flex;
+    gap: 45px;
+    border-radius: 40px;
+    padding: 45px;
+    background-color: white;
+    margin-bottom: 45px;
+}
+.navigation-floor {
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    padding: 14px 50px;
+    border-radius: 20px;
+    border: 1px solid rgb(223, 223, 223);
+    transition: background-color .2s;
+}
+.navigation-floor:hover {
+    background-color: rgb(223, 223, 223);
+}
+.navigation-floor:focus {
+    background-color: rgb(192, 192, 192);
+}
+.navigation-floor_active {
+    color: white;
+    border: none;
+    background-color: var(--accent);
+    cursor: not-allowed;
+}
+.navigation-floor_active:hover {
+    background-color: var(--accent);
+}
+.navigation-floor_active:focus {
+    background-color: var(--accent);
+}
+.navigation-map {
+    border-radius: 40px;
+    width: 100%;
+    padding: 45px;
+    background-color: white;
+    height: 750px;
+    position: relative;
+}
+.navigation-map__svg-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: relative;
+}
+.navigation-map__svg-wrapper > svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 auto;
+    object-fit: contain;
+}
+.boutique > g > rect, .boutique > g > path {
+    fill: var(--accent);
+    transition: fill .2s;
+}
+.boutique:hover > g > rect, .boutique:hover > g > path {
+    fill: var(--accent2);
+}
+.boutique:focus > g > rect, .boutique_active > g > rect, .boutique:focus > g > path, .boutique_active > g > path {
+    fill: var(--accent3);
+} 
+.boutique_empty > g > rect {
+    fill: var(--bq);
+    transition: fill .2s;
+}
+.boutique_empty:hover > g > rect {
+    fill: var(--bq2);
+}
+.boutique_empty:focus > g > rect {
+    fill: var(--bq3);
+}
+.building > path {
+    fill: var(--build);
+    transition: fill .2s;
+}
+.building:hover > path {
+    fill: var(--build2);
+}
+.building:focus > path {
+    fill: var(--build3);
+}
+.navigation-map__zoom-btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navigation-map__zoom-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(218, 218, 218);
+    font-size: 36px;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+.navigation-map__zoom-btn:hover {
+    background-color: rgb(189, 189, 189);
+}
+.navigation-map__zoom-btn:focus {
+    background-color: rgb(170, 170, 170);
+}
+.modal-boutique__wrapper {
+    display: none;
+    flex: 0;
+    transition: flex .2s;
+}
+.modal-boutique__wrapper_active {
+    display: block;
+    flex: 1;
+}
+.modal-boutique {
+    background-color: white;
+    border-radius: 40px;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+.modal-boutique__close-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+.modal-boutique__close-btn > rect {
+    fill: var(--accent);
+}
+.modal-boutique__cover {
+    height: 400px;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+}
+.modal-boutique__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modal-boutique__info {
+    padding: 20px;
+}
+.modal-boutique__category {
+    font-size: 16px;
+    color: #717171;
+    margin-bottom: 10px;
+}
+.modal-boutique__name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.modal-boutique__schedule {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.modal-boutique__description {
+    font-size: 16px;
+}
+@media screen and (max-width: 1270px) {
+    .modal-boutique__wrapper {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100dvh;
+        width: 100dvw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        flex: none;
+        z-index: 10000;
+    }
+    .modal-boutique__wrapper_active {
+        display: flex;
+    }
+    .modal-boutique {
+        max-width: 700px;
+        max-height: 90dvh;
+        overflow-x: visible;
+    }
+    .modal-boutique__close-btn {
+        display: block;
+    }
+}
+@media screen and (max-width: 980px) {
+    .navigation-floors {
+        padding: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    .navigation-floor {
+        flex: 1;
+    }
+    .navigation-map {
+        padding: 0;
+        padding-top: 45px;
+        overflow: hidden;
+    }
+}
+@media screen and (max-height: 800px) {
+    .modal-boutique__cover {
+        height: 250px;
+    }
+}
