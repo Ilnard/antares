@@ -3,16 +3,22 @@ body {
 }
 .container {
     padding: 45px;
+    padding-bottom: 0;
 }
 .sitemap {
     display: flex;
     flex-direction: column;
     row-gap: 45px;
-    height: calc(100dvh - 90px - 100px - 45px);
 }
 .sitemap__row {
-    display: flex;
     gap: 45px;
+}
+.sitemap__row_banner {
+    display: flex;
+}
+.sitemap__row_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .sitemap-item {
     display: flex;
@@ -23,11 +29,18 @@ body {
     border-radius: 40px;
     flex: 1;
     height: 340px;
+    min-width: 270px;
     background-repeat: no-repeat;
     background-position: 90% center;
-    background-size: auto 130%;
+    background-size: 90% 110%;
     cursor: pointer;
     transition: box-shadow .2s;
+}
+.sitemap-item_main {
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    cursor: default;
 }
 .sitemap-item.red {
     background-color: var(--accent);
@@ -59,9 +72,16 @@ body {
 .sitemap-item.orange:hover {
     box-shadow: 0 0 32px #FFC194;
 }
-@media screen and (max-width: 1320px) {
-    .sitemap-item {
-        background-position: -30px center;
+.sitemmap-item__name {
+    font-size: 24px;
+}
+.sitemap-item_main .sitemmap-item__name {
+    color: white;
+}
+@media screen and (max-width: 1330px) {
+    .sitemap__row_buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 1280px) {
@@ -73,7 +93,7 @@ body {
     }
 }
 @media screen and (max-width: 1100px) {
-    .sitemap-item {
+    .sitemap__row_buttons .sitemap-item {
         background-position: center;
         background-size: auto 90%;
     }
@@ -88,28 +108,28 @@ body {
     .sitemap-item {
         height: 100%;
     }
-    .sitemmap-item__name {
-        font-size: 24px;
-    }
 }
 @media screen and (max-width: 870px) {
     .sitemap {
         row-gap: 15px;
-        height: calc(100dvh - 30px);
+        height: calc(100dvh - 45px - 45px);
     }
     .sitemap__row {
         gap: 15px;
         flex-direction: column;
     }
-    .sitemap__row:first-child {
-        flex: 3;
-    }
-    .sitemap__row:last-child {
+    .sitemap__row_banner {
         flex: 2;
     }
-    .sitemap-item {
-        flex: 1;
-        background-position: 90%;
+    .sitemap__row_buttons {
+        flex: 3;
+    }
+    .sitemap__row_buttons .sitemap-item {
+        min-width: auto;
+        background-size: 95% auto;
+    }
+    .sitemap-item_main {
+        height: 100%;
     }
 }
 @media screen and (max-width: 710px) {
@@ -127,5 +147,10 @@ body {
     }
     .sitemap__row {
         gap: 10px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .sitemap-item {
+        padding: 15px;
     }
 }
