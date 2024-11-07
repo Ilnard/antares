@@ -173,6 +173,7 @@ main {
     justify-content: center;
     gap: 10px;
     padding: 10px 0;
+    margin: 0 10px;
 }
 .dev-logo__logo {
     width: 40px;

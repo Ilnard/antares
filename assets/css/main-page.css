@@ -2,8 +2,14 @@ body {
     background-color: white;
 }
 .container {
-    padding: 45px;
+    padding: 0 45px 45px;
     padding-bottom: 0;
+    max-width: 1490px;
+    margin: 0 auto;
+}
+.header {
+    margin: 0;
+    margin-bottom: 45px;
 }
 .sitemap {
     display: flex;
@@ -11,7 +17,7 @@ body {
     row-gap: 45px;
 }
 .sitemap__row {
-    gap: 45px;
+    gap: 30px;
 }
 .sitemap__row_banner {
     display: flex;
@@ -28,11 +34,11 @@ body {
     font-weight: 700;
     border-radius: 40px;
     flex: 1;
-    height: 340px;
+    height: 250px;
     min-width: 270px;
     background-repeat: no-repeat;
     background-position: 90% center;
-    background-size: 90% 110%;
+    background-size: auto 60%;
     cursor: pointer;
     transition: box-shadow .2s;
 }
@@ -78,6 +84,9 @@ body {
 .sitemap-item_main .sitemmap-item__name {
     color: white;
 }
+.footer {
+    margin: 0 45px;
+}
 @media screen and (max-width: 1330px) {
     .sitemap__row_buttons {
         display: grid;
@@ -90,12 +99,6 @@ body {
     }
     .sitemap__row {
         gap: 30px;
-    }
-}
-@media screen and (max-width: 1100px) {
-    .sitemap__row_buttons .sitemap-item {
-        background-position: center;
-        background-size: auto 90%;
     }
 }
 @media screen and (max-width: 1060px) {
@@ -112,21 +115,20 @@ body {
 @media screen and (max-width: 870px) {
     .sitemap {
         row-gap: 15px;
-        height: calc(100dvh - 45px - 45px);
+        height: calc(100dvh - 150px);
     }
     .sitemap__row {
         gap: 15px;
         flex-direction: column;
     }
     .sitemap__row_banner {
-        flex: 2;
+        flex: 2.5;
     }
     .sitemap__row_buttons {
         flex: 3;
     }
     .sitemap__row_buttons .sitemap-item {
         min-width: auto;
-        background-size: 95% auto;
     }
     .sitemap-item_main {
         height: 100%;
@@ -137,16 +139,23 @@ body {
         font-size: 16px;
     }
 }
+@media screen and (max-width: 590px) {
+    .sitemmap-item__name {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 460px) {
     .container {
-        padding: 10px;
+        padding: 0 10px 10px;
     }
     .sitemap {
         row-gap: 10px;
-        height: calc(100dvh - 20px);
     }
     .sitemap__row {
         gap: 10px;
+    }
+    .footer {
+        margin: 0 10px;
     }
 }
 @media screen and (max-width: 380px) {
