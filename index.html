@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/main-page.css" />
         <title>Антарес</title>
@@ -37,11 +38,23 @@
             </header>
             <main>
                 <section class="sitemap">
-                    <div class="sitemap__row sitemap__row_banner">
-                        <div class="sitemap-item sitemap-item_main red" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%), url('assets/img/antares.jpg')">
-                            <span class="sitemmap-item__name">ТД Антарес</span>
+                        <div class="swiper sitemap__row sitemap__row_banner">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="sitemap-item sitemap-item_main" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%), url('assets/img/antares.jpg')">
+                                        <span class="sitemmap-item__name">ТД Антарес</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sitemap-item sitemap-item_main" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%), url('assets/img/antares.jpg')">
+                                        <span class="sitemmap-item__name">ТД Антарес</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                    </div>
                     <div class="sitemap__row sitemap__row_buttons">
                         <a href="catalog.html" class="sitemap-item yellow" style="background-image: url('assets/img/shop.svg')">
                             <span class="sitemmap-item__name">Покупки и развлечения</span>
@@ -55,6 +68,26 @@
                         <a href="geo.html" class="sitemap-item orange" style="background-image: url('assets/img/gps.svg')">
                             <span class="sitemmap-item__name">Как добраться до ТД?</span>
                         </a>
+                    </div>
+                </section>
+                <section class="benefits">
+                    <h2 class="section__title">Информационный блок</h2>
+                    <div class="benefits__block">
+                        <div class="benefit" style="font-size: 2em;">
+                            ТЦ Антарес - это место для покупок, широкий выбор магазинов, кафе и закусочных, игровая зона, а также различных сфер услуг
+                        </div>
+                        <div class="benefit">
+                            <p class="benefit__accent" style="font-size: 4.5em;">9000&nbsp;м2</p>
+                            <p class="benefit__text" style="font-size: 2em;">общая площадь ТЦ</p>
+                        </div>
+                        <div class="benefit">
+                            <p class="benefit__accent" style="font-size: 3.5em;">Бесплатная парковка</p>
+                            <p class="benefit__text" style="font-size: 2em;">по всему периметру тц</p>
+                        </div>
+                        <div class="benefit">
+                            <p class="benefit__accent" style="font-size: 4em;">Более 2000</p>
+                            <p class="benefit__text" style="font-size: 2em;">посетителей в день</p>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -92,5 +125,7 @@
             <p class="dev-logo__name">Разработка и обслуживание сайта<br>«Креативная студия полного цикла PAVEL STUDIOS»</p>
         </a>
         <script src="assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/banner.js"></script>
     </body>
 </html>
