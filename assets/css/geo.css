@@ -1,7 +1,25 @@
 .map-section {
+    display: flex;
+    gap: 10px;
     padding: 45px;
     background-color: white;
     border-radius: 40px;
+}
+.geo-info {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+.geo-info__title {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+.geo-info__list li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.geo-info__list li:last-child {
+    margin-bottom: 0;
 }
 .map {
     border-radius: 40px;
@@ -20,6 +38,11 @@
 @media screen and (max-width: 980px) {
     .map-section {
         padding: 15px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .map-section {
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 720px) {

@@ -108,17 +108,17 @@ body {
 .benefit {
     border-radius: 40px;
     border: 1px solid var(--accent);
+    background-color: var(--accent);
     padding: 30px;
 }
 .benefit__accent {
     font-weight: 700;
-    color: var(--accent);
+    color: black;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 .benefit:nth-child(1) {
     background-color: var(--accent);
-    color: white;
     font-weight: 500;
     grid-area: a;
 }
@@ -202,19 +202,9 @@ body {
         padding: 20px;
     }
 }
-@media screen and (max-width: 800px) {
-    .benefits__block {
-        font-size: 8px;
-    }
-}
 @media screen and (max-width: 710px) {
     .sitemmap-item__name {
         font-size: 16px;
-    }
-}
-@media screen and (max-width: 640px) {
-    .benefits__block {
-        font-size: 6px;
     }
 }
 @media screen and (max-width: 590px) {

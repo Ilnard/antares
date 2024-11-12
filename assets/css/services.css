@@ -1,0 +1,66 @@
+@import url('catalog.css');
+.modal-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-wrapper_active {
+    display: flex;
+}
+.modal {
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    max-height: 90dvh;
+}
+.modal__close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.modal__close-btn > rect {
+    fill: var(--accent);
+}
+.modal__cover {
+    width: 100%;
+    height: 250px;
+}
+.modal__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modal__info {
+    padding: 30px;
+}
+.modal__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.modal-choose-bars {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.modal-choose-bar__name {
+    margin-bottom: 10px;
+}
+.modal-choose-bar__list {
+    display: flex;
+    gap: 10px;
+}
+.modal-choose-bar__select {
+    display: inline-flex;
+}

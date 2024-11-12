@@ -86,6 +86,16 @@ main {
 .boutique_empty:focus > g > rect {
     fill: var(--bq3);
 }
+.boutique_service > g > rect, .boutique_service > g > path {
+    fill: var(--bs);
+    transition: fill .2s;
+}
+.boutique_service:hover > g > rect, .boutique_service:hover > g > path {
+    fill: var(--bs2);
+}
+.boutique_service:focus > g > rect, .boutique_service.boutique_active > g > rect, .boutique_service:focus > g > path, .boutique_service.boutique_active > g > path {
+    fill: var(--bs3);
+} 
 .building > path {
     fill: var(--build);
     transition: fill .2s;
@@ -112,6 +122,7 @@ main {
     width: 35px;
     height: 35px;
     border-radius: 10px;
+    color: black;
     background-color: rgb(218, 218, 218);
     font-size: 36px;
     transition: background-color .2s;
